@@ -7,6 +7,9 @@ header {
   font-weight: bold;
   padding: 10px 40px;
   border-bottom: 1px solid black;
+  position: fixed; /* what happens if you set fixed without offsets? */
+  top: 0;
+  background-color: white;
 }
 
 .logo {
@@ -22,4 +25,42 @@ header {
 nav a {
   color: black;
   margin-left: 20px;
+}
+
+main {
+  border: 1px solid black;
+  margin-top: 80px;
+  padding-top: 35px;
+  padding-right: 35px;
+  display: flex;
+  z-index: 0;
+}
+
+.column {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}
+
+.left {
+  width: 630px;
+  margin-right: 35px;
+}
+
+.middle {
+  width: 300px;
+  margin-right: 35px;
+}
+
+.right {
+  width: 240px;
+}
+
+.article {
+  border: 1px solid black;
+}
+
+.with-image {
+  margin: 0;
 }
