@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -7,14 +12,17 @@ header {
   font-weight: bold;
   padding: 10px 40px;
   border-bottom: 1px solid black;
-  position: fixed; /* what happens if you set fixed without offsets? */
-  top: 0;
+  position: fixed;
+  top: 0; /* force header to stick up top when fixed */
+  right: 0; /* force header to stretch to right side when fixed */
+  left: 0; /* force header to stretch to left side when fixed */
   background-color: white;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  float: left; /* test */
 }
 
 .logo p {
@@ -29,32 +37,31 @@ nav a {
 
 main {
   border: 1px solid black;
-  margin-top: 80px;
-  padding-top: 35px;
-  padding-right: 35px;
-  display: flex;
-  z-index: 0;
+  width: 1240px; /* 600+300+240+35+35 */
+  margin-top: 80px; /* to keep clear of 80px-high header */
+  padding-top: 35px; /* just to recreate whitespace on top */
+  padding-right: 40px; /* just to recreate whitespace on right */
+  display: flex; /* will hold three columns as flex items */
 }
 
 .column {
   border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0;
+  display: flex; /* will hold articles as flex items */
+  flex-direction: column; /* major axis is downwards */
 }
 
 .left {
-  width: 630px;
-  margin-right: 35px;
+  margin-right: 35px; /* to recreate whitespace b/w columns */
+  flex: 0 0 630px; /* to stop column from changing widths */
 }
 
 .middle {
-  width: 300px;
-  margin-right: 35px;
+  margin-right: 35px; /* to recreate whitespace b/w columns */
+  flex: 0 0 300px; /* to stop column from changing widths */
 }
 
 .right {
-  width: 240px;
+  flex: 0 0 240px; /* to stop column from changing widths */
 }
 
 .article {
