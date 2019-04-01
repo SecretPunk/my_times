@@ -40,7 +40,6 @@ main {
   font-family: Georgia, serif;
   font-size: 17px;
   color: black;
-
 }
 
 .column {
@@ -63,8 +62,21 @@ main {
   flex: 0 0 240px; /* to stop column from changing widths */
 }
 
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+}
+
 .article {
   border: 1px solid black;
+}
+
+.side-by-side .article {
+  width: 300px;
+}
+
+.article h2 {
+  font-size: 22px;
 }
 
 .headline {
@@ -96,8 +108,10 @@ main {
 
 .image-2 {
   background-image: url("../images/img-story-2.png");
+  width: 300px;
 }
 
 .image-3 {
   background-image: url("../images/img-story-3.png");
+  width: 300px;
 }
