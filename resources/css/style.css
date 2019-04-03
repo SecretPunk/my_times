@@ -17,7 +17,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  float: left; /* test */
+  float: left;
 }
 
 .logo p {
